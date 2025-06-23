@@ -10,9 +10,9 @@ class Player:
     def get_move(self, game):
         pass
 
-class RandomComputer(Player):
-    def _init_(self, letter):
-        super()._init_(letter)
+class RandomComputerPlayer(Player):
+    def __init__(self, letter):
+        super().__init__(letter)
 
     def get_move(self, game):
         # get a random valid spot for our next move
@@ -20,8 +20,8 @@ class RandomComputer(Player):
         return square
 
 class HumanPlayer(Player):
-    def _init_(self, letter):
-        super()._init_(letter) 
+    def __init__(self, letter):
+        super().__init__(letter) 
 
     def get_move(self, game):
         valid_square = False
